@@ -25,4 +25,4 @@ do {
     if(guess==num){
         console.log("you won");
     }   
-}while(guess!=num);
+}
