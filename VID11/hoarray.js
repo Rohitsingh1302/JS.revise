@@ -37,4 +37,13 @@ console.log(num5); //2345 ko delete krdiya
 console.log(numbers); //167 ko print krdiya
 
 //concat
-let num6=numbers.concat(students)
+let num6=numbers.concat(students) ; //
+console.log(num6); //concatenation
+
+//push
+let num7=numbers.push(8) ;
+console.log(numbers);
+
+//pop
+let num8=numbers.pop() ;
+console.log(numbers);
