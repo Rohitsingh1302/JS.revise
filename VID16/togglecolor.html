@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="heading">THIS IS MY HEADING FOR THIS TASK</h1>
+    <button id="headingbutton">CLICK</button>
+    <script>
+        const bttn=document.getElementById("headingbutton");
+        const element=document.getElementById("heading");
+        bttn.addEventListener("click", function(){
+            if(element.style.color==="red"){
+                element.style.color="blue";
+            }else{
+                element.style.color="red";
+            }
+        });
+        // element.addEventListener("click",()=>{
+        //     element.remove();
+        // }) // heading ko touch krte hi udd jaayegi
+    </script>
+</body>
+</html>
