@@ -1,0 +1,28 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TIMER</title>
+</head>
+<body>
+    <div>
+        <h1 id="time"></h1>
+        <button id="stopper">STOP TIMER</button>
+    </div>
+
+    <script>
+        function showTime(){
+            const currentTime= new Date(); //inbuilt fnxn
+            const readableTime=`${currentTime.getHours()}:${currentTime.getMinutes()}:${currentTime.getSeconds()}`
+            document.getElementById ("time").innerText=readableTime;
+        }
+         let interval= setInterval(showTime,1000);//current time display hora hai 1 second se ,setInterval is a inbuilt fnxn
+
+         const button=document.getElementById("stopper")
+         button.addEventListener("click",()=>{
+            clearInterval(interval); //timer rokne ka code
+         })
+    </script>
+</body>
+</html> -->

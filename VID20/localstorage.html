@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LocalStorage Demo</title>
+</head>
+<body>
+    <p> hey my name is <span id="inpu">rohit singh </span></p>
+    <input id="username" type="text" placeholder="enter your name">
+    <button id="clickbutton">CLICK ME</button>
+    <script>
+        
+        const button=document.getElementById("clickbutton")
+        const user=document.getElementById("username")
+        const input=document.getElementById("inpu")
+
+        button.addEventListener("click",()=>{
+            const value=user.value;
+            console.log(value);
+            localStorage.setItem("name",value);
+            location.reload();
+        })
+        window.addEventListener("load",()=>{
+            const value=localStorage.getItem("name");
+            input.innerText=value;
+        })
+
+    </script>
+</body>
+</html>
