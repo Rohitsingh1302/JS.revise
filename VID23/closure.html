@@ -8,15 +8,15 @@
 <body>
     <script>
         function outer(){
-            const name="Rohit Singh";
+            const name="Rohit Singh"; //variable name is in outer function scope
  
             function inner(){
                 console.log(name); // Accessing variable from outer function
         }
-        inner();
+        inner(); // Calling inner function within outer function
     }
 
-    outer();
+    outer(); // Invoking the outer function to see closure in action
 
     </script>
 </body>
