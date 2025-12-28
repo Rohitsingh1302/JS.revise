@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COMPOSITION</title>
+</head>
+<body>
+    <script>
+        function add(a,b){
+            return a + b;
+        }
+        function multiply(c,d){
+            return c * d;
+        }
+        function square(value){
+            return value * value;
+        }
+// Function Composition: Combining two functions to create a new function
+        // function compose(fn1,fn2){
+        //     return function(a,b){
+        //         return fn2(fn1(a,b));
+        //     }
+        // }'
+        //ES6 WAY:-'
+        const compose = (fn1, fn2) => (a, b) => fn2(fn1(a, b));
+        let addThenSquare = compose(add, square);
+        console.log(addThenSquare(2,3)); // Outputs: 25
+
+    </script>
+</body>
+</html>
