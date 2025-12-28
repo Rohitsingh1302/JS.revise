@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>closure</title>
+</head>
+<body>
+    <h1 id="my-name" style="font-size: 50px;">ROHIT SINGH</h1>
+    <button id="size-btn">CLICK FOR CHANGE</button>
+    <script>
+        const myName=document.getElementById("my-name");
+        const btn=document.getElementById("size-btn");
+        
+        function textsizer(size){
+            function changeSize(){
+                myName.style.fontSize= `${size}px`;
+            }
+            return changeSize;
+        }
+        const size20=textsizer(20);
+        const size40=textsizer(40);
+        const size60=textsizer(60);
+
+        btn.addEventListener("click", size60);
+
+    </script>
+</body>
+</html>
