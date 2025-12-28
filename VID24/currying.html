@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>currying</title>
+</head>
+<body>
+    <script>
+        function add(a){
+            return function(b){
+                return function(c){
+                    return a + b + c;
+            }
+        }
+    }
+    console.log(add(5)(3)(8)); // Outputs: 16
+    </script>
+
+    <script>
+        const add=(a)=>(b)=>(c)=> a + b + c;
+        console.log(add(5)(3)(9)); // Outputs: 17 //EASY WAY
+    </script>
+</body>
+</html> 
+//used when a function with multiple arguments is transformed into a sequence of functions each taking a single argument.
