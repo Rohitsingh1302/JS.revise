@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>yield iterator</title>
+</head>
+<body>
+    <script>
+        // let array = [1,2,3];
+        // for (let i of array) {
+        //     console.log(i);
+        // } // it prints 1,2,3 from top to bottom but if i want to change the iteration thenn??...
+        
+        //syntax of generator function:
+        function* generator(){
+            yield 2;
+            yield 4;
+            yield 6;
+        }
+        let gen = generator();
+        for (let i of gen) {
+            console.log(i);
+        }
+
+        //example 2:
+        function* makeiterator(start,end,step){
+            for(let i=start;i<=end;i+=step){
+                yield i;
+            }
+        }
+        let itr = makeiterator(1,10,2);
+        for(let i of itr){
+            console.log(i);
+        }
+
+    </script> 
+</body>
+</html>
