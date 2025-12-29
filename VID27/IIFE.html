@@ -1,0 +1,38 @@
+//IIFE - immdeately invoked function expression
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IIFEE</title>
+</head>
+<body>
+    <script>
+        //pehle ese krte they:-
+        // function add(x,y){
+        //     console.log(x+y);
+        // }
+        // add(5,10);
+
+        //ab ese krte hain:-
+
+        (function add(x,y){
+            console.log(x+y);
+        })(5,10);
+
+        (function say(){
+            console.log("Hello World");
+        })();
+
+        //es6 way:-
+        ((x,y) => {
+            console.log(x+y);
+        })(5,5);
+        
+        (() => {
+            console.log("Hello from ES6");
+        })();
+         
+    </script>
+</body>
+</html>

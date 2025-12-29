@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IIFE</title>
+</head>
+<body>
+    //es6 way of this promise code using IIFE
+    <script>
+        //pehle ka tareeka 
+    //      async function server(){
+    //      let serverresult= await fetch(
+    //     "https://jsonplaceholder.typicode.com/posts"
+    //        );
+    //       console.log(serverresult);//first tareeka
+    //       console.log(await serverresult.json());//dono treeke sahi h
+    //          }
+    //           server();
+
+    //ab es6 way using IIFE
+        (async () => {
+            let response = await fetch(
+                "https://jsonplaceholder.typicode.com/posts"
+            );
+            const data = await response.json();
+            console.log(data);
+        })();
+          
+    </script>
+</body>
+</html>
